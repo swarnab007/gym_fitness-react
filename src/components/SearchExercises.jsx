@@ -9,7 +9,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
     if (search) {
       console.log(search);
       const response = await fetchData(
-        "https://exercisedb.p.rapidapi.com/exercises/bodyPart/back"
+        `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${search}?limit=10`
       );
       console.log(response);
 

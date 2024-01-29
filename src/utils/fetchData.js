@@ -9,9 +9,12 @@ const options = {
 };
 
 export const fetchData = async (url) => {
-    const res = await fetch(url);
-    const data = await res.json();
-
-    // console.log(data);
-    return data;
+  try {
+    const response = await fetch(url, options);
+    const result = await response.json();
+    console.log(result);
+    return result;
+  } catch (error) {
+    console.error(error);
+  }
 }
