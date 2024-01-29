@@ -7,8 +7,9 @@ import ExerciseDetail from "./pages/ExerciseDetail";
 import Footer from './components/Footer'
 
 function App() {
+
   return (
-    <Box width='100vw' height='100vh' sx={{width: {xl: '1488px'}}} m='auto'>
+    <Box width="100%" sx={{width: {xl: '1488px'}}} m='auto' overflow="hidden">
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
