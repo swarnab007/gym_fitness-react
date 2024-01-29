@@ -3,15 +3,18 @@ import React from 'react'
 const options = {
   method: 'GET',
   headers: {
-    'X-RapidAPI-Key': 'a14288d59fmsh2ab2e67fabd1675p1c8b5bjsn92daa6a7c791',
+    'X-RapidAPI-Key': 'a24f534d51msh1dde772c9163457p144f03jsne365b8960fe6',
     'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
   }
 };
 
 export const fetchData = async (url) => {
-    const res = await fetch(url);
-    const data = await res.json();
-
-    // console.log(data);
-    return data;
+  try {
+    const response = await fetch(url, options);
+    const result = await response.json();
+    console.log(result);
+    return result;
+  } catch (error) {
+    console.error(error);
+  }
 }
