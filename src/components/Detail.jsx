@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ExerciseDetail = () => {
+const Detail = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const ExerciseDetail = () => {
   )
 }
 
-export default ExerciseDetail
+export default Detail

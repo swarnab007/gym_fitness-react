@@ -4,22 +4,22 @@ import Exercises from "../components/Exercises";
 import HeroBanner from "../components/HeroBanner";
 
 const Home = () => {
-  const [exercise, setExercises] = useState([]);
+  const [exercises, setExercises] = useState([]);
   const [bodyPart, setBodyPart] = useState("all");
 
   return (
     <div>
       <HeroBanner />
       <SearchExercises
+        exercises={exercises}
         setExercises={setExercises}
         bodyPart={bodyPart}
         setBodyPart={setBodyPart}
       />
       <Exercises
+        exercises={exercises}
         setExercises={setExercises}
         bodyPart={bodyPart}
-        setBodyPart={setBodyPart}
-        
       />
     </div>
   );
