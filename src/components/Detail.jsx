@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Stack, Typography } from "@mui/material";
 
 const Detail = ({ exerciseDetails }) => {
-  // console.log(exerciseDetails);
+  console.log(exerciseDetails);
   const { bodyPart, name, gifUrl, equipment, target } = exerciseDetails;
   return (
     <Stack

@@ -17,15 +17,15 @@ const ExerciseDetail = () => {
             const exerciseUrl = 'https://exercisedb.p.rapidapi.com';
             // const youTubeUrl = '';
 
-            const exercisesData = await fetchData(`${exerciseUrl}/exercise/exercises/${id}`);
+            const exercisesData = await fetchData(`${exerciseUrl}/exercises/exercise/${id}`);
             setExerciseDetails(exercisesData);
         }
         fetchExercisesData();
     },[id])
   return (
-    <Box>
-        <Detail />
-        <ExerciseVideos exerciseDetails={exerciseDetails} />
+    <Box sx={{ mt: { lg: '96px', xs: '60px' } }}>
+        <Detail exerciseDetails={exerciseDetails} />
+        <ExerciseVideos />
         <SimilarExercises />
     </Box>
   )
