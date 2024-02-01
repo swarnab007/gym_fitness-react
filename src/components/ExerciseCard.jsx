@@ -1,10 +1,11 @@
 import React from "react";
-import { Button, Typography, Stack } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Button, Typography, Stack ,Box} from "@mui/material";
+
 
 const ExerciseCard = ({ exercise }) => {
   return (
-    <Link to={`/exercise/${exercise.id}`} style={{ textDecoration: "none" }}>
+    
+      <Box style={{ textDecoration: "none" }}>
       <img
         src={exercise.gifUrl}
         alt={exercise.name}
@@ -63,11 +64,12 @@ const ExerciseCard = ({ exercise }) => {
         mt="11px"
         pb="10px"
         textTransform="capitalize"
-        wordWrap="break-word"
+        
       >
         {exercise.name}
       </Typography>
-    </Link>
+      </Box>
+   
   );
 };
 

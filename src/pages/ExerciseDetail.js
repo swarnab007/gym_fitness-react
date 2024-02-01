@@ -12,18 +12,18 @@ const ExerciseDetail = () => {
 
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
-
+      console.log("ID",id);
         const fetchExercisesData = async () => {
             const exerciseUrl = 'https://exercisedb.p.rapidapi.com';
             // const youTubeUrl = '';
-
+           
             const exercisesData = await fetchData(`${exerciseUrl}/exercises/exercise/${id}`);
             setExerciseDetails(exercisesData);
         }
         fetchExercisesData();
     },[id])
   return (
-    <Box sx={{ mt: { lg: '96px', xs: '60px' } }}>
+    <Box>
         <Detail exerciseDetails={exerciseDetails} />
         <ExerciseVideos />
         <SimilarExercises />
@@ -31,4 +31,4 @@ const ExerciseDetail = () => {
   )
 }
 
-export default ExerciseDetail
+export default ExerciseDetail;

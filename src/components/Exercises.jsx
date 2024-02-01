@@ -3,6 +3,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import ExerciseCard from "./ExerciseCard";
 import { fetchData, options } from "../utils/fetchData";
 import Pagination from "@mui/material/Pagination";
+import { Link } from "react-router-dom";
 
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -51,7 +52,9 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
       </Typography>
       <Stack direction={{ lg: "row", xs: "column" }} spacing={4}>
         {currentExercises.map((exercise, index) => (
-          <ExerciseCard key={index} exercise={exercise} />
+          <Link  key={index} to={`/exercise/${exercise.id}`}> 
+          <ExerciseCard exercise={exercise} />
+          </Link>
         ))}
       </Stack>
       {exercises.length > 9 && (
