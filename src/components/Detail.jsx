@@ -1,11 +1,17 @@
-import React from 'react'
+import React from "react";
+import { Button, Stack, Typography } from "@mui/material";
 
-const Detail = () => {
+const Detail = ({ exerciseDetails }) => {
+  // console.log(exerciseDetails);
+  const { bodyPart, name, gifUrl, equipment, target } = exerciseDetails;
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <Stack
+      gap="60px"
+      sx={{ flexDirection: { lg: "row" }, p: "20px", alignItems: "center" }}
+    >
+      <img src={gifUrl} alt={name} />
+    </Stack>
+  );
+};
 
-export default Detail
+export default Detail;
