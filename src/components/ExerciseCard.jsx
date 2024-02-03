@@ -1,11 +1,10 @@
 import React from "react";
 import { Button, Typography, Stack ,Box} from "@mui/material";
-
+import { Link } from "react-router-dom";
 
 const ExerciseCard = ({ exercise }) => {
   return (
-    
-      <Box style={{ textDecoration: "none" }}>
+    <Link to={`/exercise/${exercise.id}`} style={{ textDecoration: "none" }}>
       <img
         src={exercise.gifUrl}
         alt={exercise.name}
@@ -22,7 +21,8 @@ const ExerciseCard = ({ exercise }) => {
             fontSize: { xs: "14px", lg: "18px" },
             borderRadius: "20px",
             textTransform: "capitalize",
-            textDecoration: "none", // Remove underline
+            // Remove underline
+             textDecoration: "none",
             "&:hover": {
               background: "#FF7575", // Change background color on hover
             },
@@ -40,7 +40,8 @@ const ExerciseCard = ({ exercise }) => {
             fontSize: { xs: "14px", lg: "18px" },
             borderRadius: "20px",
             textTransform: "capitalize",
-            textDecoration: "none", // Remove underline
+            // Remove underline
+             textDecoration: "none",
             "&:hover": {
               background: "#E6A80D", // Change background color on hover
             },
@@ -56,7 +57,8 @@ const ExerciseCard = ({ exercise }) => {
         mb="20px"
         sx={{
           fontSize: { xs: "18px", lg: "24px" },
-          textDecoration: "none", // Remove underline
+          // Remove underline
+          textDecoration: "none",
           "&:hover": {
             color: "#E65C00", // Change text color on hover
           },
@@ -64,12 +66,11 @@ const ExerciseCard = ({ exercise }) => {
         mt="11px"
         pb="10px"
         textTransform="capitalize"
-        
+        wordWrap="break-word"
       >
         {exercise.name}
       </Typography>
-      </Box>
-   
+   </Link>
   );
 };
 

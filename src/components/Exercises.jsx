@@ -52,9 +52,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
       </Typography>
       <Stack direction={{ lg: "row", xs: "column" }} spacing={4}>
         {currentExercises.map((exercise, index) => (
-          <Link  key={index} to={`/exercise/${exercise.id}`}> 
-          <ExerciseCard exercise={exercise} />
-          </Link>
+          <ExerciseCard key={index} exercise={exercise} />
         ))}
       </Stack>
       {exercises.length > 9 && (
