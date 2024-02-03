@@ -43,7 +43,8 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
             <img
               style={{
                 borderTopLeftRadius: "20px",
-                width: "100%", // Make the image width responsive
+                width: "100%",
+                height: "200px", // Make the image width responsive
               }}
               src={video.video.thumbnails[0].url}
               alt="video.channelName"
